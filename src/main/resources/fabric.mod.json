@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "pockets",
+  "version": "${version}",
+
+  "name": "Pockets",
+  "description": "Unofficial 1.21.1 Fabric port of Pockets by Apace100, developed with AI assistance.",
+  "authors": [
+    "Apace",
+    "Hari"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/pockets/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.apace100.pockets.Pockets"
+    ]
+  },
+  "mixins": [
+    "pockets.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "1.21.1",
+    "fabric-api": "*",
+    "java": ">=21"
+  }
+}
