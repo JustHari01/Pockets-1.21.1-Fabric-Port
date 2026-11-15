@@ -12,9 +12,17 @@ The `pockets:has_pockets` item tag determines which armor pieces have pockets. B
 
 The `pockets:pocket_blacklist` item tag excludes items from storage. Add item identifiers to this tag in a datapack to prevent them from being pocketed.
 
-## Compatibility and credits
+## Compatibility
 
-Requires Fabric Loader and Fabric API for Minecraft 1.21.1. Existing 1.20.1 Pockets item data is migrated when the server can decode its stored items.
+Requires Fabric Loader 0.16.10 or newer, Fabric API, and Java 21 for Minecraft 1.21.1. Legacy 1.20.1 item-data migration code is included, but migration from a real 1.20.1 world has not been verified.
+
+## Verification
+
+- Built from this public source with Java 21, Gradle 8.12.1, and Fabric Loom 1.10.5. The rebuilt JAR is byte-identical to the prepared release.
+- The release JAR started on an isolated Minecraft 1.21.1 dedicated server with Fabric Loader 0.16.10 and Fabric API 0.116.7+1.21.1. A fresh test world was generated, saved in the Overworld, Nether, and End, and shut down cleanly.
+- This server smoke test checks mod discovery, initialization, and startup only. It does not verify inventory right-click behavior, tooltip rendering, break/drop behavior, multiplayer synchronization, or migration of real 1.20.1 item data. The port remains an alpha release.
+
+## Credits and license
 
 The original Pockets project and assets are by Apace100. This port is independent and is not endorsed by the original author. The original MIT license and copyright notice are retained in `LICENSE`.
 
